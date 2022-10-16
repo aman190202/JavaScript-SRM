@@ -1,0 +1,51 @@
+<html>
+    <script>
+        var a=[];
+        function getvalue()
+        {
+
+            for(var j=0;j<3;j++)
+            {   
+                var b=[];
+                for(var i=0;i<3;i++)
+                {
+                    b[i]=window.prompt("Enter number ");
+                }
+                a.push(b);
+            }
+        }
+        function show()
+        {
+            for(var i=0;i<3;i++)
+            {
+                var x=" ";
+                for(var j=0;j<3;j++)
+                {
+                    x+=a[i][j];
+                }
+                document.getElementById("row"+i).innerHTML=x;
+            }
+        }
+        function check()
+        {
+            if(a[0][0]==a[1][1] && a[1][1]==a[2][2])
+            {
+                document.getElementById("row3").innerHTML="DIAGONAL SAME";
+            }
+            else
+            {
+                document.getElementById("row3").innerHTML="DIAGONAL NOT SAME";
+            }
+        }
+    </script>
+    <body>
+        <input type="button" value= "Get value" onclick="getvalue()"/>
+        <input type="button" value="show" onclick="show()">
+        <input type="button" value="check" onclick="check()">
+        <br/>
+        <label id="row0"></label><br/>
+        <label id="row1"></label><br/>
+        <label id="row2"></label><br/>
+        <label id="row3"></label>
+    </body>
+</html>

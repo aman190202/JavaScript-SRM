@@ -1,0 +1,45 @@
+<html>
+    <script>
+        function addition()
+        {
+            var one = document.getElementById("first").value;
+            var two = document.getElementById("second").value;
+            var third = parseInt(one) + parseInt(two);
+            document.getElementById("RESULT").innerHTML=third;
+        }
+        function subtract()
+        {
+            var one = document.getElementById("first").value;
+            var two = document.getElementById("second").value;
+            var third = parseInt(one)-parseInt(two);
+            document.getElementById("RESULT").innerHTML=third;
+        }
+        function division()
+        {
+            var one = document.getElementById("first").value;
+            var two = document.getElementById("second").value;
+            var third = one/two;
+            document.getElementById("RESULT").innerHTML=third;
+        }
+        function multiply()
+        {
+            var one = document.getElementById("first").value;
+            var two = document.getElementById("second").value;
+            var third = one*two;
+            document.getElementById("RESULT").innerHTML=third;
+        }
+    </script>
+    <body>
+        <label>First Value  </label>
+        <input type="number" id="first"/>
+        <br/>
+        <label>Second Value </label>
+        <input type="number" id="second"/>
+        <br/>
+        <input type="button" value="+" onclick="addition()"/>
+        <input type="button" value="-" onclick="subtract()"/>
+        <input type="button" value="/" onclick="division()"/>
+        <input type="button" value="x" onclick="multiply()"/>
+        <br/>
+        <label id="RESULT"></label>
+</html>

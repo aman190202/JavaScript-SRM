@@ -1,0 +1,30 @@
+<html>
+    <script>
+        var a;
+        function OTP()
+        {
+            a=parseInt(Math.random()*9999);
+            window.alert("YOUR OTP IS " + a);
+        }
+        function verify()
+        {
+            var value1=document.getElementById("otp").value;
+            if(value1==a)
+            {
+                document.getElementById("result").innerHTML="True hai";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="False hai";
+            }
+        }
+    </script>
+    <body>
+        <input type="button" value="Generate OTP" onclick="OTP()"/>
+        <br/>
+        Enter OTP : 
+        <input type="number" id="otp"/>
+        <input type="button" value = "verfiy" onclick="verify()"/>
+        <label id="result"></label>
+    </body>
+</html>

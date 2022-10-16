@@ -1,0 +1,16 @@
+<html>
+    <script>
+        let stat=0;
+        const friends = ["Aman", " Angad ", "Ali"];
+        function showme()
+        {
+            document.getElementById("output").innerHTML= friends[stat];
+            stat = stat + 1;
+        }
+    </script>
+    <body>
+        My friends are : <br>
+        <label id="output"></label> <br>
+        <input type="button" value="Show friends" onclick="showme()">
+    </body>
+</html>

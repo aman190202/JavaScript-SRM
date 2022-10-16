@@ -1,0 +1,48 @@
+<html>
+    <script>
+        const arr = [];
+        function disp()
+        {
+            let stri = arr.toString();
+            document.getElementById("Display").innerHTML=stri;
+        }
+        function insert()
+        {
+            let val = document.getElementById("Insert").value;
+            arr.push(val);
+            disp();
+        }
+        function insert_on_front()
+        {
+            let val = document.getElementById("Insert").value;
+            arr.splice(0,0,val);
+            disp();
+        }
+
+        function del_from_back()
+        {
+            arr.pop();
+            disp();
+        }
+
+        function del_from_front()
+        {
+            arr.shift();
+            disp();
+        }
+    </script>
+    <body>
+        <h1>Array Insertion and Deletion</h1>
+        <br>
+        Current array : <label id="Display"></label>
+        <br>
+        Insert 
+        <input type="text"  id="Insert">
+        <br>
+        <input type="button" onclick="insert()" value="Insert Behind">
+        <input type="button" onclick="insert_on_front()" value="Insert on Front">
+        <br>
+        <input type="button" onclick="del_from_back()" value="Delete From Behind">
+        <input type="button" onclick="del_from_front()" value="Delete From Front">
+    </body>
+</html>
